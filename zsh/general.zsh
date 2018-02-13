@@ -79,54 +79,8 @@ HISTFILE=$HOME/.bash_history_`basename $MYTTY`
 
 # ssh
 # export SSH_KEY_PATH="~/.ssh/rsa_id"
-
-# Functions declarations
-function grepp() {
-  ps aux | grep $1
-}
-
-mvnrun () {
-  echo mvn $@
-  eval mvn $@
-  echo mvn $@
-}
-
-function kssh {
-    POD_ID=$1
-    CONTAINER_ID=$2
-    POD_NAMESPACE="$(k get pods --all-namespaces | grep $POD_ID | awk '{print $1}')"
-    if [ -z "$CONTAINER_ID" ]
-      then
-        kubectl -n $POD_NAMESPACE exec -it $POD_ID -- bash
-      else
-        echo "starting with container $CONTAINER_ID"
-        kubectl -n $POD_NAMESPACE exec -it $POD_ID -c $CONTAINER_ID -- bash
-    fi
-}
-
 ssh-add -K 2>/dev/null;
 ssh-add ~/.ssh/id_rsa_*
-
-# Jenv setup
-export PATH="/Users/dzmitry/.jenv/shims:${PATH}"
-source "/usr/local/Cellar/jenv/0.4.4/libexec/libexec/../completions/jenv.zsh"
-jenv rehash 2>/dev/null
-export JENV_LOADED=1
-unset JAVA_HOME
-jenv() {
-typeset command
-command="$1"
-if [ "$#" -gt 0 ]; then
-        shift
-fi
-
-case "$command" in
-    enable-plugin|rehash|shell|shell-options)
-    eval `jenv "sh-$command" "$@"`;;
-*)
-command jenv "$command" "$@";;
-esac
-}
 
 export chrome_driver_path="/Applications/chromedriver"
 
