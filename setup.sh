@@ -1,6 +1,10 @@
 #!/usr/bin/env bash
 
-for f in ~/dotfiles/*
+dotfiles=("zshrc" "gitconfig")
+dir="${HOME}/dotfiles"
+
+for dotfile in "${dotfiles[@]}"
 do
-  ln -sf "$f" "$HOME/.${f##*/}"
+ echo "making symlink for ${dotfile}"
+ ln -sf "${dir}/${dotfile}" "${HOME}/.${dotfile}"
 done
