@@ -1,3 +1,4 @@
-for zsh_file in $HOME/.zsh/*.zsh; do
+dir="${HOME}/dotfiles/zsh"
+for zsh_file in $dir/*.zsh; do
   source $zsh_file
 done
