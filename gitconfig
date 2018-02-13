@@ -1,0 +1,28 @@
+[push]
+    default = simple
+
+[alias]
+    co = checkout
+    ci = commit
+    st = status
+    br = branch
+    hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+    type = cat-file -t
+    dump = cat-file -p
+    rb = !git checkout master && git fetch origin -p && git pull -r && git checkout - && git rebase master
+    log1 = log --oneline -20
+    please = push --force-with-lease
+
+[user]
+    name = Dzmitry Hubin (EPAM)
+    email = dhubin.contractor@libertyglobal.com
+
+[core]
+    autocrlf = input
+    trustctime = false
+
+[filter "lfs"]
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
+    required = true
