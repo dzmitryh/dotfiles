@@ -37,3 +37,7 @@ function gr {
 function dsh {
     docker run -it "$1" /bin/sh
 }
+
+function dbash {
+    docker run -it "$1" /bin/bash
+}
