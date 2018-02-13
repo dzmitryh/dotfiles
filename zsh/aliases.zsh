@@ -45,3 +45,13 @@ alias kclusterdev='k config set current-context dev'
 alias kclusterobo='k config set current-context obo'
 alias kdev='k -n development'
 alias klab5a='k -n lab5a'
+
+# Docker
+alias di='docker images'
+alias dps='docker ps -a'
+alias db='docker build'
+alias drmi='docker rmi'
+alias drm='docker rm'
+alias dr='docker run'
+alias ds='docker stop'
+alias dins='docker inspect'

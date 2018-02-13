@@ -32,3 +32,8 @@ function mkdircd {
 function gr {
     grep -R "$*" .
 }
+
+#Docker
+function dbash {
+    docker run -it "$1" /bin/sh
+}
