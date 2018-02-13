@@ -22,3 +22,13 @@ function kssh {
         kubectl -n $POD_NAMESPACE exec -it $POD_ID -c $CONTAINER_ID -- bash
     fi
 }
+
+function mkdircd {
+    mkdir -p "$*"
+    cd "$*"
+}
+
+# gr - search recursively with grep
+function gr {
+    grep -R "$*" .
+}
