@@ -36,6 +36,7 @@ alias gbr='git checkout -b'
 
 # Maven
 alias mci='mvnrun clean install'
+alias mcis='mvnrun clean install -DskipTests=true'
 alias mcd='mvnrun clean deploy'
 alias mct='mvnrun clean test'
 
