@@ -13,10 +13,6 @@
     log1 = log --oneline -20
     please = push --force-with-lease
 
-[user]
-    name = Dzmitry Hubin (EPAM)
-    email = dhubin.contractor@libertyglobal.com
-
 [core]
     autocrlf = input
     trustctime = false
@@ -26,3 +22,6 @@
     smudge = git-lfs smudge -- %f
     process = git-lfs filter-process
     required = true
+
+[include]
+path = ~/.gitconfig.local
