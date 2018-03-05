@@ -3,4 +3,4 @@ for zsh_file in $dir/*.zsh; do
   source $zsh_file
 done
 
-ln -s ~/dotfiles/zsh ~/zsh
+ln -sf ~/dotfiles/zsh ~/zsh
