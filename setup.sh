@@ -8,3 +8,5 @@ do
  echo "making symlink for ${dotfile}"
  ln -sf "${dir}/${dotfile}" "${HOME}/.${dotfile}"
 done
+
+ln -sf ~/dotfiles/zsh ~/zsh
