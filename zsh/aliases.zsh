@@ -15,6 +15,7 @@ alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 alias lls='ls -all'
+alias llst='lls -t'
 alias cb='pbcopy' 
 
 # Vim
