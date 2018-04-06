@@ -41,3 +41,10 @@ function dsh {
 function dbash {
     docker run -it "$1" /bin/bash
 }
+
+#Git
+# does rebase onto branch if specified otherwise master is used
+function grb {
+    BRANCH=${1:-master}
+    g rb = -x !git checkout $BRANCH && git fetch origin -p && git pull -r && git checkout - && git rebase $BRANCH
+}
