@@ -16,7 +16,8 @@ alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 alias lls='ls -all'
 alias llst='lls -t'
-alias cb='pbcopy' 
+alias cb='pbcopy'
+alias updots='cd ~/dotfiles && g pull && source ~/.zshrc'
 
 # Vim
 alias v="vim"
