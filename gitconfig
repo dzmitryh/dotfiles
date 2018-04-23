@@ -11,6 +11,7 @@
     dump = cat-file -p
     log1 = log --oneline -20
     please = push --force-with-lease
+    rb = !git checkout master && git fetch origin -p && git pull -r && git checkout - && git rebase master
 
 [core]
     autocrlf = input
