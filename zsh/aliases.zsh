@@ -9,7 +9,7 @@
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# OSX general
+# OSX general & other
 alias ls="ls -FHG"
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
@@ -18,6 +18,7 @@ alias lls='ls -all'
 alias llst='lls -t'
 alias cb='pbcopy'
 alias updots='cd ~/dotfiles && g pull && source ~/.zshrc'
+alias ccat='pygmentize -g'
 
 # Vim
 alias v="vim"
