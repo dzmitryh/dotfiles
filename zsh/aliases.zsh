@@ -42,6 +42,7 @@ alias mci='mvnrun clean install'
 alias mcis='mvnrun clean install -DskipTests=true'
 alias mcd='mvnrun clean deploy'
 alias mct='mvnrun clean test'
+alias mcit='mvnrun verify -pl integration-tests -Ptests-for-localhost'
 
 # K8s
 alias k='kubectl'
