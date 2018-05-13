@@ -48,3 +48,14 @@ function grb {
     BRANCH=${1:-master}
     g rb = -x !git checkout $BRANCH && git fetch origin -p && git pull -r && git checkout - && git rebase $BRANCH
 }
+
+# Displays who is listen on specified port
+function check {
+    PORT=${1}
+    if [ -z "$PORT" ]
+      then
+        echo "Port argument is required"
+      else
+        lsof -i :${PORT} | grep LISTEN
+    fi
+}
