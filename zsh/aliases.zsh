@@ -61,3 +61,8 @@ alias drm='docker rm'
 alias dr='docker run'
 alias ds='docker stop'
 alias dins='docker inspect'
+
+# jEnv
+alias java9='jenv local 9'
+alias java8='jenv local 1.8'
+alias jv='jenv version'
