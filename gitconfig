@@ -12,8 +12,8 @@
     log1 = log --oneline -20
     please = push --force-with-lease
     rb = !git checkout master && git fetch origin -p && git pull -r && git checkout - && git rebase master
-    rbc = git rebase --continue
-    rba = git rebase --abort
+    rbc = rebase --continue
+    rba = rebase --abort
     coml = "!f(){ git checkout master && git pull; };f"
 
 [core]
