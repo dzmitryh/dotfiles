@@ -49,6 +49,7 @@ alias k='kubectl'
 alias kbusybox='k --namespace=default exec -it `k get pods --namespace=default | grep busybox | cut -d " " -f 1` sh'
 alias kclusterdev='k config set current-context dev'
 alias kclusterobo='k config set current-context obo'
+alias kclusterprod='k config set current-context prod'
 alias kdev='k -n development'
 alias klab5a='k -n lab5a'
 
