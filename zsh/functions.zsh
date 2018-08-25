@@ -10,6 +10,23 @@ function mvnrun () {
   echo mvn $@
 }
 
+function switchm2 () {
+    M2_GLOBAL=~/.m2/settings-global.xml
+    M2_LGI=~/.m2/settings-lgi.xml
+    M2_DEFAULT=~/.m2/settings.xml
+
+    if [ -f ${M2_GLOBAL} ]; then
+      echo "setting m2 settings to use $M2_GLOBAL"
+      mv ${M2_DEFAULT} ${M2_LGI}
+      mv ${M2_GLOBAL} ${M2_DEFAULT}
+
+    elif [ -f ${M2_LGI} ]; then
+      echo "setting m2 settings to use $M2_LGI"
+      mv ${M2_DEFAULT} ${M2_GLOBAL}
+      mv ${M2_LGI} ${M2_DEFAULT}
+    fi
+}
+
 function kssh {
     POD_ID=$1
     CONTAINER_ID=$2
