@@ -54,6 +54,7 @@ alias kdev='k -n development'
 alias klab5a='k -n lab5a'
 
 # Docker
+alias dk='docker'
 alias di='docker images'
 alias dps='docker ps -a'
 alias db='docker build'
