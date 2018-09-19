@@ -52,11 +52,11 @@ function gr {
 
 #Docker
 function dsh {
-    docker run -it "$1" /bin/sh
+    docker exec -it "$1" /bin/sh
 }
 
 function dbash {
-    docker run -it "$1" /bin/bash
+    docker exec -it "$1" /bin/bash
 }
 
 #Git
