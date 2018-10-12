@@ -38,6 +38,7 @@ alias git commit='git commit -S'
 alias gbr='git checkout -b'
 
 # Maven
+alias mcp='mvnrun clean package'
 alias mci='mvnrun clean install'
 alias mcis='mvnrun clean install -DskipTests=true'
 alias mcd='mvnrun clean deploy'
