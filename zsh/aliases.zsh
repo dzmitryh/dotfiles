@@ -66,6 +66,7 @@ alias dr='docker run'
 alias ds='docker stop'
 alias dins='docker inspect'
 alias dl='docker logs'
+alias dsl="dps | awk 'END {print $1}' | xargs docker stop"
 
 # jEnv
 alias java9='jenv local 9'
