@@ -77,10 +77,8 @@ HISTFILE=$HOME/.bash_history_`basename $MYTTY`
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
-# ssh
-# export SSH_KEY_PATH="~/.ssh/rsa_id"
-ssh-add -K 2>/dev/null;
-ssh-add ~/.ssh/id_rsa_*
+# load ssh pr keys into agent
+grep -slR "PRIVATE" ~/.ssh | xargs ssh-add -K >/dev/null 2>&1
 
 export chrome_driver_path="/Applications/chromedriver"
 
