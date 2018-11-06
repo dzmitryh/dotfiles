@@ -10,6 +10,10 @@ function mvnrun () {
   echo mvn $@
 }
 
+function mexe () {
+    eval mvnrun clean package exec:exec -pl $@
+}
+
 function switchm2 () {
     M2_GLOBAL=~/.m2/settings-global.xml
     M2_LGI=~/.m2/settings-lgi.xml
