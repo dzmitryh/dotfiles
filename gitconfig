@@ -26,5 +26,11 @@
     process = git-lfs filter-process
     required = true
 
-[include]
-path = ~/.gitconfig.local
+[includeIf "gitdir:/projects/Pet-Projects/"]
+  path = .gitconfig-personal
+[includeIf "gitdir:~/dotfiles/"]
+  path = .gitconfig-personal
+[includeIf "gitdir:~/go/"]
+  path = .gitconfig-personal
+[includeIf "gitdir:/lg/"]
+  path = .gitconfig-work
