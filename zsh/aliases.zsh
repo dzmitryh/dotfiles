@@ -19,6 +19,7 @@ alias llst='lls -t'
 alias cb='pbcopy'
 alias updots='cd ~/dotfiles && g pull && source ~/.zshrc'
 alias ccat='pygmentize -g'
+alias showals='cat ~/dotfiles/zsh/aliases.zsh'
 
 # Vim
 alias v="vim"
