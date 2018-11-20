@@ -69,16 +69,16 @@ function gr {
 
 #Docker
 function dsh {
-    docker exec -it "$1" /bin/sh
+    docker exec -it -v ~/docker-bashrc/.bashrc:/root/.bashrc "$1" /bin/sh
 }
 
 function dbash {
-    docker exec -it "$1" /bin/bash
+    docker exec -it -v ~/docker-bashrc/.bashrc:/root/.bashrc "$1" /bin/bash
 }
 
 # Runs docker container and then bashes it
 function drbash {
-    docker run -it "$1" /bin/bash
+    docker run -it -v ~/docker-bashrc/.bashrc:/root/.bashrc "$1" /bin/bash
 }
 
 function dbashl {
