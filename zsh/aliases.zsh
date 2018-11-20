@@ -20,7 +20,7 @@ alias cb='pbcopy'
 alias updots='cd ~/dotfiles && g pull && source ~/.zshrc'
 alias ccat='pygmentize -g'
 alias showals='cat ~/dotfiles/zsh/aliases.zsh'
-alias size='du -h . -d 1 | sort -n -r'
+alias size='du -h . -d 1 | sort -h'
 
 # Vim
 alias v="vim"
