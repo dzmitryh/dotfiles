@@ -76,6 +76,11 @@ function dbash {
     docker exec -it "$1" /bin/bash
 }
 
+# Runs docker container and then bashes it
+function drbash {
+    docker run -it "$1" /bin/bash
+}
+
 function dbashl {
     CONTAINER_ID=`docker ps | tail -1 | awk '{print $1}' | xargs`
     docker exec -it ${CONTAINER_ID} /bin/bash
