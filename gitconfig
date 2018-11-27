@@ -15,6 +15,7 @@
     rbc = rebase --continue
     rba = rebase --abort
     coml = "!f(){ git checkout master && git pull; };f"
+    cbr = !sh -c 'git co -b $1' -
 
 [core]
     autocrlf = input
@@ -33,4 +34,8 @@
 [includeIf "gitdir:~/go/"]
   path = .gitconfig-personal
 [includeIf "gitdir:/lg/"]
+  path = .gitconfig-work
+[includeIf "gitdir:/spark/"]
+  path = .gitconfig-work
+[includeIf "gitdir:/kraken/"]
   path = .gitconfig-work
