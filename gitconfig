@@ -39,3 +39,6 @@
   path = .gitconfig-work
 [includeIf "gitdir:/kraken/"]
   path = .gitconfig-work
+[user]
+	name = Dzmitry Hubin (EPAM)
+	email = dhubin.contractor@libertyglobal.com
