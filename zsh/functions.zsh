@@ -69,14 +69,14 @@ function gr {
 
 #Docker
 function dsh {
-    docker run -it -v ~/dotfiles/docker/.bashrc:/root/.bashrc "$1" /bin/sh
+    docker run -it -v ~/dotfiles/docker/.bashrc:/root/.bashrc --entrypoint /bin/sh "$1"
 }
 
 function dbash {
-    docker run -it -v ~/dotfiles/docker/.bashrc:/root/.bashrc "$1" /bin/bash
+    docker run -it -v ~/dotfiles/docker/.bashrc:/root/.bashrc --entrypoint /bin/bash "$1"
 }
 
-# Runs docker container and then bashes it
+# Runs docker container with defined before entrypoint and then bashes it
 function drbash {
     docker run -it -v ~/dotfiles/docker/.bashrc:/root/.bashrc "$1" /bin/bash
 }
