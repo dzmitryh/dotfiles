@@ -23,6 +23,7 @@ alias showals='cat ~/dotfiles/zsh/aliases.zsh'
 alias showfs='cat ~/dotfiles/zsh/functions.zsh'
 alias size='du -h . -d 1 | sort -h'
 alias sizer='du -ah | sort -h'
+alias zr='source ~/.zshrc'
 
 # Vim
 alias v="vim"
@@ -49,6 +50,7 @@ alias mcis='mvnrun clean install -DskipTests=true'
 alias mcd='mvnrun clean deploy'
 alias mct='mvnrun clean test'
 alias mcit='mvnrun verify -pl integration-tests -Ptests-for-localhost'
+alias mdt='mvnrun dependency:tree'
 
 # K8s
 alias k='kubectl'
