@@ -103,3 +103,8 @@ function check {
         lsof -i :${PORT} | grep LISTEN
     fi
 }
+
+# Password generator
+gpwd() {
+    pwgen -Bs $1 1 |pbcopy |pbpaste; echo "Has been copied to clipboard"
+}
