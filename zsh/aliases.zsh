@@ -76,7 +76,7 @@ alias dins='docker inspect'
 alias dl='docker logs'
 alias dsl="dps | awk 'END {print $1}' | xargs docker stop"
 
-# jEnv
-alias java9='jenv local 9'
-alias java8='jenv local 1.8'
-alias jv='jenv version'
+# Sdkman
+alias java10='sdk use java 10.0.2-open'
+alias java11='sdk use java 11.0.1-open'
+alias jv='sdk list java'
