@@ -77,6 +77,6 @@ alias dl='docker logs'
 alias dsl="dps | awk 'END {print $1}' | xargs docker stop"
 
 # Sdkman
-alias java10='sdk use java 10.0.2-open'
-alias java11='sdk use java 11.0.1-open'
+alias java10='sdk default java 10.0.2-open'
+alias java11='sdk default java 11.0.1-open'
 alias jv='sdk list java'
