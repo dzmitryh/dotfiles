@@ -83,7 +83,7 @@ function drbash {
 
 function dbashl {
     CONTAINER_ID=`docker ps | tail -1 | awk '{print $1}' | xargs`
-    docker exec -it ${CONTAINER_ID} /bin/bash
+    docker exec -it -v ~/dotfiles/docker/.bashrc:/root/.bashrc ${CONTAINER_ID} /bin/bash
 }
 
 #Git
