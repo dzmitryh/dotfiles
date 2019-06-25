@@ -33,12 +33,9 @@
   path = .gitconfig-personal
 [includeIf "gitdir:~/go/"]
   path = .gitconfig-personal
-[includeIf "gitdir:/lg/"]
+[includeIf "gitdir:/pe/"]
   path = .gitconfig-work
-[includeIf "gitdir:/spark/"]
-  path = .gitconfig-work
-[includeIf "gitdir:/kraken/"]
-  path = .gitconfig-work
+
 [user]
-	name = Dzmitry Hubin (EPAM)
-	email = dhubin.contractor@libertyglobal.com
+    name = Dmitry Gubin
+    email = dgubin@productiveedge.com
