@@ -80,3 +80,6 @@ alias dsl="dps | awk 'END {print $1}' | xargs docker stop"
 alias java10='sdk default java 10.0.2-open'
 alias java11='sdk default java 11.0.1-open'
 alias jv='sdk list java'
+
+# Mysql
+alias cmysql='mysql -u root -proot'
