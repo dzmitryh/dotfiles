@@ -83,3 +83,8 @@ alias jv='sdk list java'
 
 # Mysql
 alias cmysql='mysql -u root -proot'
+
+# Vagrant
+alias vup='vagrant up'
+alias vr='vagrant reload'
+alias vh='vagrant halt'
