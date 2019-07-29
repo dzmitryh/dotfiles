@@ -108,3 +108,12 @@ function check {
 gpwd() {
     pwgen -Bs $1 1 |pbcopy |pbpaste; echo "Has been copied to clipboard"
 }
+
+# Telnet
+function t() {
+  telnet $1 $2
+}
+
+function t80() {
+  telnet $1 80
+}

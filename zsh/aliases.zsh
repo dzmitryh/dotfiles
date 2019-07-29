@@ -88,3 +88,7 @@ alias cmysql='mysql -u root -proot'
 alias vup='vagrant up'
 alias vr='vagrant reload'
 alias vh='vagrant halt'
+alias vs='vagrant ssh'
+
+# Network
+alias prt='netstat -nr'
