@@ -41,6 +41,7 @@ alias gc='git commit'
 alias gd='git diff'
 alias git commit='git commit -S'
 alias gbr='git checkout -b'
+alias grs='g remote -v'
 
 # Maven
 alias mcc='mvnrun clean compile'
