@@ -54,6 +54,8 @@ alias mcd='mvnrun clean deploy'
 alias mct='mvnrun clean test'
 alias mcit='mvnrun verify -pl integration-tests -Ptests-for-localhost'
 alias mdt='mvnrun dependency:tree'
+alias mvu='mvnrun versions:use-latest-versions -DgenerateBackupPoms=false'
+alias mvup='mvnrun versions:update-properties validate -DgenerateBackupPoms=false'
 
 # K8s
 alias k='kubectl'
