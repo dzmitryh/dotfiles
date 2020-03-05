@@ -47,6 +47,7 @@ alias git commit='git commit -S'
 alias gbr='git checkout -b'
 alias grs='g remote -v'
 alias gsbr='g branch --all'
+alias gres='git reset --hard origin/master'
 
 # Maven
 alias mcc='mvnrun clean compile'
