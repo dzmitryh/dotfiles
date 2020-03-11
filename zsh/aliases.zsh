@@ -50,6 +50,7 @@ alias gsbr='g branch --all'
 alias gres='git reset --hard origin/master'
 alias gt='g fetch -t'
 alias grtags='g ls-remote --tags --sort=committerdate origin'
+alias gltags='g fetch -t && g ls-remote --tags --sort=committerdate origin'
 
 # Maven
 alias mcc='mvnrun clean compile'
