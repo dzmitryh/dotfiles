@@ -20,7 +20,6 @@
     up = !sh -c 'git push origin HEAD:refs/for/$1' -
     sandbox = !sh -c 'git push -u origin HEAD:sandbox/$1' -
     fsandbox = !sh -c 'git push -f -u origin HEAD:sandbox/$1' -
-    r = !sh -c 'git rebase -i origin/$1' -
     review = !sh -c 'refname=`printf refs/changes/%02d/$1/$2 $(($1 % 100))` && git fetch origin $refname && git checkout -b $1_$2 FETCH_HEAD' -
     gl = log --oneline --graph --decorate
     s = status
