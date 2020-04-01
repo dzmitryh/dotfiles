@@ -16,6 +16,7 @@ alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 alias lls='ls -all'
 alias llst='lls -t'
+alias llsl='ls -ltr' # sort by date, most recent last
 alias cb='pbcopy'
 alias updots='cd ~/dotfiles && g pull && source ~/.zshrc'
 alias ccat='pygmentize -g'
