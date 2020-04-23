@@ -37,10 +37,10 @@ function kssh {
     POD_NAMESPACE="$(k get pods --all-namespaces | grep $POD_ID | awk '{print $1}')"
     if [ -z "$CONTAINER_ID" ]
       then
-        kubectl -n $POD_NAMESPACE exec -it $POD_ID -- bash
+        kubectl -n $POD_NAMESPACE exec -it $POD_ID -- sh
       else
         echo "starting with container $CONTAINER_ID"
-        kubectl -n $POD_NAMESPACE exec -it $POD_ID -c $CONTAINER_ID -- bash
+        kubectl -n $POD_NAMESPACE exec -it $POD_ID -c $CONTAINER_ID -- sh
     fi
 }
 
