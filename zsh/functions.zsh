@@ -10,6 +10,12 @@ function mvnrun () {
   echo mvn $@
 }
 
+function mcir () {
+  echo mvnrun clean install -rf :$@
+  eval mvnrun clean install -rf :$@
+  echo mvnrun clean install -rf :$@
+}
+
 function mexe () {
     eval mvnrun clean package exec:exec -pl $@
 }
