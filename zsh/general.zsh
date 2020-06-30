@@ -55,6 +55,7 @@ ZSH_THEME="powerlevel9k/powerlevel9k"
 plugins=(git mvn)
 
 source $ZSH/oh-my-zsh.sh
+[[ /usr/local/bin/kubectl ]] && source <(kubectl completion zsh)
 
 # Gives windows opportunity to save their own history
 MYTTY=`tty`
