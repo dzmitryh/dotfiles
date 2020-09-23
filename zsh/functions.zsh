@@ -123,3 +123,9 @@ function t() {
 function t80() {
   telnet $1 80
 }
+
+# Google auth
+totp() {
+#  oathtool --totp -b $(<~/".totp_${1:-google}") | pbcopy;
+  cat .totp_google | xargs oathtool --totp -b
+}
