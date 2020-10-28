@@ -126,6 +126,5 @@ function t80() {
 
 # Google auth
 totp() {
-#  oathtool --totp -b $(<~/".totp_${1:-google}") | pbcopy;
-  cat ~/.totp_google | xargs oathtool --totp -b
+  oathtool --totp -b $(<~/".totp_${1:-google}") | pbcopy;
 }
