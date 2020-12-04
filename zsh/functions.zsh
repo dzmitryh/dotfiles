@@ -139,5 +139,5 @@ function b64d() {
 }
 
 function sha1() {
-    echo -n "$1" | openssl sha1
+    echo -n $1 | openssl sha1
 }
