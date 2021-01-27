@@ -131,11 +131,11 @@ totp() {
 
 # Encoding & Decoding
 function b64e() {
-    echo -n "$1" | base64
+    echo -n $1 | base64
 }
 
 function b64d() {
-    echo "$1" | base64 --decode
+    echo $1 | base64 --decode
 }
 
 function sha1() {
