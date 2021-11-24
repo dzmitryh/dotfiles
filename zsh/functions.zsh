@@ -124,6 +124,11 @@ function t80() {
   telnet $1 80
 }
 
+# Logs
+function tl() {
+  tail -f $1
+}
+
 # Google auth
 totp() {
   oathtool --totp -b $(<~/".totp_${1:-google}") | pbcopy;
