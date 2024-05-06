@@ -1,13 +1,14 @@
 #!/usr/bin/env bash
+set +x
 
 function grepp() {
   ps aux | grep $1
 }
 
 function mvnrun () {
-  echo mvn $@
-  eval mvn $@
-  echo mvn $@
+  echo mvn $@ -T 1C
+  eval mvn $@ -T 1C
+  echo mvn $@ -T 1C
 }
 
 function mcir () {
@@ -21,20 +22,36 @@ function mexe () {
 }
 
 function switchm2 () {
-    M2_GLOBAL=~/.m2/settings-global.xml
-    M2_LGI=~/.m2/settings-lgi.xml
+    PRJ_POSTFIX=$1
+    M2_TARGET=~/.m2/settings-${PRJ_POSTFIX}.xml
     M2_DEFAULT=~/.m2/settings.xml
 
-    if [ -f ${M2_GLOBAL} ]; then
-      echo "setting m2 settings to use $M2_GLOBAL"
-      mv ${M2_DEFAULT} ${M2_LGI}
-      mv ${M2_GLOBAL} ${M2_DEFAULT}
-
-    elif [ -f ${M2_LGI} ]; then
-      echo "setting m2 settings to use $M2_LGI"
-      mv ${M2_DEFAULT} ${M2_GLOBAL}
-      mv ${M2_LGI} ${M2_DEFAULT}
+    if [ -f ${M2_TARGET} ]; then
+      echo "setting m2 settings to use $M2_TARGET"
+      M2_PREV="$(findPrevPrj)"
+      echo "prev settings = "${M2_PREV}
+      mv ${M2_DEFAULT} ${M2_PREV}
+      mv ${M2_TARGET} ${M2_DEFAULT}
+    else
+      echo "already using ${M2_TARGET}"
     fi
+}
+
+function findPrevPrj() {
+  M2_RR=~/.m2/settings-rr.xml
+  M2_MED=~/.m2/settings-med.xml
+  M2_GLOBAL=~/.m2/settings-global.xml
+  M2_ANOTHER=~/.m2/settings-another.xml
+
+  if [ ! -f ${M2_MED} ]; then
+    echo ${M2_MED}
+  elif [ ! -f ${M2_RR} ]; then
+    echo ${M2_RR}
+  elif [ ! -f ${M2_GLOBAL} ]; then
+    echo ${M2_GLOBAL}
+  elif [ ! -f ${M2_ANOTHER} ]; then
+    echo ${M2_ANOTHER}
+  fi
 }
 
 function kssh {
@@ -145,4 +162,17 @@ function b64d() {
 
 function sha1() {
     echo -n $1 | openssl sha1
+}
+
+# Intelij Idea
+function reloadIdea() {
+  # enable tracing
+  set +x
+  # reloads zsh
+  zr
+  # find idea process and kills it
+  kill $(ps aux | grep 'idea' | awk 'NR==1{print $2}')
+  sleep 10
+  # starting new idea instance
+  # idea
 }

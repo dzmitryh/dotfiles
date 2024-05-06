@@ -38,6 +38,7 @@ alias gs='git status'
 alias ga='git add .'
 alias gl='git pull'
 alias glr='git pull -r'
+alias glm='git pull origin master'
 alias gf='git fetch'
 alias gst= 'git stash'
 alias gstp='git stash pop'
@@ -54,6 +55,10 @@ alias grtags='g ls-remote --tags --sort=committerdate origin'
 alias gltags='g fetch -t && g ls-remote --tags --sort=committerdate origin'
 alias gum='g up master'
 alias gud='g up develop'
+alias gcl='g clone'
+
+# BitBucket
+alias bpr='bitbucket-pr'
 
 # Maven
 alias mcc='mvnrun clean compile'
@@ -67,6 +72,7 @@ alias mcit='mvnrun verify -pl integration-tests -Ptests-for-localhost'
 alias mdt='mvnrun dependency:tree'
 alias mvu='mvnrun versions:use-latest-versions -DgenerateBackupPoms=false'
 alias mvup='mvnrun versions:update-properties validate -DgenerateBackupPoms=false'
+alias mvns='cat ~/.m2/settings.xml'
 
 # K8s
 alias k='kubectl'
@@ -90,6 +96,7 @@ alias ds='docker stop'
 alias dins='docker inspect'
 alias dl='docker logs'
 alias dsl="dps | awk 'END {print $1}' | xargs docker stop"
+alias dcu="docker-compose up -d"
 
 # Sdkman
 alias java10='sdk default java 10.0.2-open'
@@ -107,3 +114,6 @@ alias vs='vagrant ssh'
 
 # Network
 alias prt='netstat -nr'
+
+# Podman
+# alias podman-sock="rm -f /tmp/podman.sock && ssh -i ~/.ssh/podman-machine-default -p \$(podman system connection list --format=json | jq '.[0].URI' | sed -E 's|.+://.+@.+:([[:digit:]]+)/.+|\1|') -L'/tmp/podman.sock:/run/user/1000/podman/podman.sock' -N core@localhost"
