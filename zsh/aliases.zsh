@@ -56,6 +56,7 @@ alias gltags='g fetch -t && g ls-remote --tags --sort=committerdate origin'
 alias gum='g up master'
 alias gud='g up develop'
 alias gcl='g clone'
+alias uprjs='ls -R -d --color=never */.git | sed 's/\/.git//' | xargs -I{} bash -c 'echo Updating {}..; git -C {} pull''
 
 # BitBucket
 alias bpr='bitbucket-pr'
