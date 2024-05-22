@@ -45,7 +45,6 @@ alias gstp='git stash pop'
 alias gp='git push'
 alias gc='git commit'
 alias gd='git diff'
-alias git commit='git commit -S'
 alias gbr='git checkout -b'
 alias grs='g remote -v'
 alias gsbr='g branch --all'
@@ -56,7 +55,7 @@ alias gltags='g fetch -t && g ls-remote --tags --sort=committerdate origin'
 alias gum='g up master'
 alias gud='g up develop'
 alias gcl='g clone'
-alias uprjs='ls -R -d --color=never */.git | sed 's/\/.git//' | xargs -I{} bash -c 'echo Updating {}..; git -C {} pull''
+alias uprjs="ls -R -d --color=never */.git | sed 's/\/.git//' | xargs -I{} bash -c 'echo Updating {}..; git -C {} pull'"
 
 # BitBucket
 alias bpr='bitbucket-pr'
