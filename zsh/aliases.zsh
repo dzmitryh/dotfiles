@@ -25,6 +25,7 @@ alias showfs='cat ~/dotfiles/zsh/functions.zsh'
 alias size='du -h . -d 1 | sort -h'
 alias sizer='du -ah | sort -h'
 alias zr='source ~/.zshrc'
+alias getsw='~/ebs/get-sw.sh'
 
 # Vim
 alias v="vim"
