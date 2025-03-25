@@ -116,6 +116,12 @@ function grb {
     g rb = -x !git checkout $BRANCH && git fetch origin -p && git pull -r && git checkout - && git rebase $BRANCH
 }
 
+# search which branch does conatin that commit id 
+function gfc {
+    COMMIT_ID=${1}
+    git for-each-ref --contains $COMMIT_ID
+}
+
 # Displays who is listen on specified port
 function check {
     PORT=${1}

@@ -18,6 +18,7 @@
     rbc = rebase --continue
     rba = rebase --abort
     md =  !git checkout develop && git fetch origin -p && git pull -r && git checkout - && git merge develop
+    mr = !sh -c 'git fetch $1 merge-requests/$2/head:mr-$1-$2 && git checkout mr-$1-$2' -
     coml = "!f(){ git checkout master && git pull; };f"
     codl = "!f(){ git checkout develop && git pull; };f"
     codel = "!f(){ git checkout development && git pull; };f"
